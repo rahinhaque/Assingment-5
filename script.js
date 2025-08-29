@@ -45,3 +45,23 @@ clearBtn.addEventListener("click", function () {
   historyList.innerHTML = "";
 });
 
+
+
+let copyCountEl = document.getElementById("copy-count");
+let copyCount = parseInt(copyCountEl.innerText) || 0;
+
+
+let copyButtons = document.getElementsByClassName("copy-btn");
+
+for (let i = 0; i < copyButtons.length; i++) {
+    copyButtons[i].addEventListener("click", function () {
+       
+        copyCount++;
+        copyCountEl.innerText = copyCount;
+
+       
+        alert("Number copied successfully!");
+    });
+}
+
+
